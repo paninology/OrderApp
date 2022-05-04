@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F088D50282106A900D60DDB /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F088D4F282106A900D60DDB /* OrderConfirmationViewController.swift */; };
 		8F53CD412807B5F100A29A42 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F53CD402807B5F100A29A42 /* CategoryTableViewController.swift */; };
 		8F53CD432807B60000A29A42 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F53CD422807B60000A29A42 /* MenuTableViewController.swift */; };
 		8F53CD452807B60D00A29A42 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F53CD442807B60D00A29A42 /* OrderTableViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F088D4F282106A900D60DDB /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		8F53CD402807B5F100A29A42 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		8F53CD422807B60000A29A42 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		8F53CD442807B60D00A29A42 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				8F53CD482807D87800A29A42 /* MenuItem.swift */,
 				8F53CD4A2807EAA200A29A42 /* ResponseModels.swift */,
 				8F53CD4C28084A6900A29A42 /* MenuController.swift */,
+				8F088D4F282106A900D60DDB /* OrderConfirmationViewController.swift */,
 			);
 			path = OderApp;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F088D50282106A900D60DDB /* OrderConfirmationViewController.swift in Sources */,
 				8F53CD492807D87800A29A42 /* MenuItem.swift in Sources */,
 				8F53CD4D28084A6900A29A42 /* MenuController.swift in Sources */,
 				8F53CD432807B60000A29A42 /* MenuTableViewController.swift in Sources */,
