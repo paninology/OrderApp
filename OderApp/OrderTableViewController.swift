@@ -101,6 +101,7 @@ class OrderTableViewController: UITableViewController {
         content.text = menuItem.name
 //        content.secondaryText = "$\(menuItem.price)"
         content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
+        content.image = UIImage(systemName: "photo.on.rectangle")
         cell.contentConfiguration = content
     }
 

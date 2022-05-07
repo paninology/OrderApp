@@ -13,6 +13,8 @@ class MenuTableViewController: UITableViewController {
 //    let menuController = MenuController()
     var menuItems: [MenuItem] = []
     
+    var imageLoadTasks: [IndexPath: Task<Void, Never>] = [:]
+    
     required init?(coder: NSCoder, category: String) {
         self.category = category
         super.init(coder: coder)
@@ -42,6 +44,9 @@ class MenuTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+   
+    
     func updateUI(with menuItems: [MenuItem]) {
         self.menuItems = menuItems
         self.tableView.reloadData()
@@ -83,6 +88,15 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        imageLoadTasks[indexPath]?.cancel()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        imageLoadTasks.forEach{ key, value in value.cancel()}
+    }
+    
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         
@@ -90,7 +104,22 @@ class MenuTableViewController: UITableViewController {
         content.text = menuItem.name
 //        content.secondaryText = "$\(menuItem.price)"
         content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
+        content.image = UIImage(systemName: "photo.on.rectangle")
         cell.contentConfiguration = content
+        imageLoadTasks[indexPath] = Task.init {
+            if let image = try? await
+                MenuController.shared.fetchImage(from: menuItem.imageURL) {
+                if let currentIndexPath = self.tableView.indexPath(for: cell),
+                   currentIndexPath == indexPath {
+                    var content = cell.defaultContentConfiguration()
+                    content.text = menuItem.name
+                    content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
+                    content.image = image
+                    cell.contentConfiguration = content
+                }
+            }
+            imageLoadTasks[indexPath] = nil
+        }
     }
 
     /*

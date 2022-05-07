@@ -20,6 +20,7 @@
 		8F62F4E82806E81600E30AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F62F4E62806E81600E30AB1 /* Main.storyboard */; };
 		8F62F4EA2806E81900E30AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F62F4E92806E81900E30AB1 /* Assets.xcassets */; };
 		8F62F4ED2806E81900E30AB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F62F4EB2806E81900E30AB1 /* LaunchScreen.storyboard */; };
+		8F774F982826473C00F48AC9 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F774F972826473C00F48AC9 /* MenuItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8F62F4E92806E81900E30AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F62F4EC2806E81900E30AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F62F4EE2806E81900E30AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F774F972826473C00F48AC9 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				8F53CD4A2807EAA200A29A42 /* ResponseModels.swift */,
 				8F53CD4C28084A6900A29A42 /* MenuController.swift */,
 				8F088D4F282106A900D60DDB /* OrderConfirmationViewController.swift */,
+				8F774F972826473C00F48AC9 /* MenuItemCell.swift */,
 			);
 			path = OderApp;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				8F088D50282106A900D60DDB /* OrderConfirmationViewController.swift in Sources */,
 				8F53CD492807D87800A29A42 /* MenuItem.swift in Sources */,
+				8F774F982826473C00F48AC9 /* MenuItemCell.swift in Sources */,
 				8F53CD4D28084A6900A29A42 /* MenuController.swift in Sources */,
 				8F53CD432807B60000A29A42 /* MenuTableViewController.swift in Sources */,
 				8F53CD4B2807EAA200A29A42 /* ResponseModels.swift in Sources */,
