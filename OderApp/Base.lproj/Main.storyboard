@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItem" textLabel="Dyx-C6-pcw" detailTextLabel="zoO-Sq-LGP" style="IBUITableViewCellStyleValue1" id="eEk-GF-DbU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItem" textLabel="Dyx-C6-pcw" detailTextLabel="zoO-Sq-LGP" style="IBUITableViewCellStyleValue1" id="eEk-GF-DbU" customClass="MenuItemCell" customModule="OderApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eEk-GF-DbU" id="Gaf-nO-u7V">
@@ -184,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Order" textLabel="lu1-kR-KqI" detailTextLabel="jYz-tt-Hs5" style="IBUITableViewCellStyleValue1" id="kXL-PA-LiX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Order" textLabel="lu1-kR-KqI" detailTextLabel="jYz-tt-Hs5" style="IBUITableViewCellStyleValue1" id="kXL-PA-LiX" customClass="MenuItemCell" customModule="OderApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kXL-PA-LiX" id="HOz-Ik-2ip">

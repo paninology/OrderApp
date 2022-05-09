@@ -10,6 +10,7 @@ import UIKit
 class OrderTableViewController: UITableViewController {
     
     var minutesToPrepareOrder = 0
+    var imageLoadTasks: [IndexPath: Task<Void, Never>] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,14 +96,24 @@ class OrderTableViewController: UITableViewController {
     }
     
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? MenuItemCell else { return }
+        
         let menuItem = MenuController.shared.order.menuItems[indexPath.row]
         
-        var content = cell.defaultContentConfiguration()
-        content.text = menuItem.name
-//        content.secondaryText = "$\(menuItem.price)"
-        content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
-        content.image = UIImage(systemName: "photo.on.rectangle")
-        cell.contentConfiguration = content
+        cell.itemName = menuItem.name
+        cell.price = menuItem.price
+        cell.image = nil
+        
+        imageLoadTasks[indexPath] = Task.init {
+            if let image = try? await MenuController.shared.fetchImage(from: menuItem.imageURL) {
+                if let currentIndexPath = self.tableView.indexPath(for: cell),
+                   currentIndexPath == indexPath {
+                    cell.image = image
+                }
+            }
+            imageLoadTasks[indexPath] = nil
+        }
+        
     }
 
     
