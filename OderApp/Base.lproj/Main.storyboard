@@ -235,6 +235,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQS-1B-svn">
+                                <rect key="frame" x="132" y="419" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VWJ-RU-TNM">
                                 <rect key="frame" x="20" y="385.5" width="374" height="71.5"/>
                                 <subviews>
@@ -265,6 +269,7 @@
                     </view>
                     <connections>
                         <outlet property="confirmationLAbel" destination="sza-t6-6hn" id="lYL-UU-S3O"/>
+                        <outlet property="progressView" destination="RQS-1B-svn" id="lYz-VG-cot"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cND-Zq-kP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

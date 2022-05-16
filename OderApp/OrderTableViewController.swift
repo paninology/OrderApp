@@ -28,8 +28,7 @@ class OrderTableViewController: UITableViewController {
         let menuIds = MenuController.shared.order.menuItems.map{ $0.id }
         Task.init {
             do {
-                let minutesToPrepare = try await
-                MenuController.shared.submitOrder(forMenuIDs: menuIds)
+                let minutesToPrepare = try await MenuController.shared.submitOrder(forMenuIDs: menuIds)
                 minutesToPrepareOrder = minutesToPrepare
                 performSegue(withIdentifier: "confirmOrder", sender: nil)
             } catch {

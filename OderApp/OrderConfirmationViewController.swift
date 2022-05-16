@@ -9,10 +9,15 @@ import UIKit
 
 class OrderConfirmationViewController: UIViewController {
 
-    let minutesToPrepare: Int
+    var minutesToPrepare: Int
+
+ 
+    var timeLeft = 60
+  
     
     @IBOutlet weak var confirmationLAbel: UILabel!
    
+    @IBOutlet weak var progressView: UIProgressView!
     
     init?(coder: NSCoder, minutesToPrepare: Int) {
         self.minutesToPrepare = minutesToPrepare
@@ -27,8 +32,29 @@ class OrderConfirmationViewController: UIViewController {
         super.viewDidLoad()
         
         confirmationLAbel.text = "Thank you for your order! Your wait time is approximately \(minutesToPrepare) minutes."
-
+        onTimerFires(timeLeft: minutesToPrepare)
         // Do any additional setup after loading the view.
+    }
+    
+    func timeUpdate() {
+        confirmationLAbel.text = " minetes left "
+    }
+    
+    @objc func onTimerFires(timeLeft: Int)
+    {
+        self.timeLeft = timeLeft
+        
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { (Timer) in
+                if self.timeLeft > 0 {
+                    let totalProgress = Float(self.timeLeft) / Float(self.minutesToPrepare)
+                    self.timeLeft -= 1
+                    print ("\(self.timeLeft) seconds",self.minutesToPrepare, totalProgress)
+                    self.confirmationLAbel.text = "Your wait time is approximately \(self.timeLeft) minutes."
+                    self.progressView.setProgress((1 - totalProgress), animated: true)
+                } else {
+                    Timer.invalidate()
+                }
+            }
     }
     
 

@@ -78,15 +78,15 @@
 				8F62F4E92806E81900E30AB1 /* Assets.xcassets */,
 				8F62F4EB2806E81900E30AB1 /* LaunchScreen.storyboard */,
 				8F62F4EE2806E81900E30AB1 /* Info.plist */,
+				8F53CD482807D87800A29A42 /* MenuItem.swift */,
+				8F53CD4A2807EAA200A29A42 /* ResponseModels.swift */,
+				8F53CD4C28084A6900A29A42 /* MenuController.swift */,
+				8F774F972826473C00F48AC9 /* MenuItemCell.swift */,
 				8F53CD402807B5F100A29A42 /* CategoryTableViewController.swift */,
 				8F53CD422807B60000A29A42 /* MenuTableViewController.swift */,
 				8F53CD442807B60D00A29A42 /* OrderTableViewController.swift */,
 				8F53CD462807BD3900A29A42 /* MenuItemDetailViewController.swift */,
-				8F53CD482807D87800A29A42 /* MenuItem.swift */,
-				8F53CD4A2807EAA200A29A42 /* ResponseModels.swift */,
-				8F53CD4C28084A6900A29A42 /* MenuController.swift */,
 				8F088D4F282106A900D60DDB /* OrderConfirmationViewController.swift */,
-				8F774F972826473C00F48AC9 /* MenuItemCell.swift */,
 			);
 			path = OderApp;
 			sourceTree = "<group>";
