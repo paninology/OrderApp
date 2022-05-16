@@ -235,9 +235,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQS-1B-svn">
-                                <rect key="frame" x="132" y="419" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RQS-1B-svn">
+                                <rect key="frame" x="100" y="376.5" width="214" height="4"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VWJ-RU-TNM">
                                 <rect key="frame" x="20" y="385.5" width="374" height="71.5"/>
@@ -248,7 +247,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zX-EJ-bVv">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zX-EJ-bVv">
                                         <rect key="frame" x="150" y="40.5" width="74.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Dismiss" titleAlignment="center"/>
@@ -262,9 +261,13 @@
                         <viewLayoutGuide key="safeArea" id="P3G-mF-RcL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="RQS-1B-svn" firstAttribute="leading" secondItem="P3G-mF-RcL" secondAttribute="leading" constant="100" id="C4a-1L-T3q"/>
+                            <constraint firstItem="P3G-mF-RcL" firstAttribute="trailing" secondItem="RQS-1B-svn" secondAttribute="trailing" constant="100" id="CqD-K8-MPj"/>
                             <constraint firstItem="VWJ-RU-TNM" firstAttribute="centerY" secondItem="XNp-f2-AiS" secondAttribute="centerY" id="Wvf-gv-DIz"/>
                             <constraint firstItem="VWJ-RU-TNM" firstAttribute="leading" secondItem="P3G-mF-RcL" secondAttribute="leading" constant="20" id="ZeO-fv-XnR"/>
                             <constraint firstItem="P3G-mF-RcL" firstAttribute="trailing" secondItem="VWJ-RU-TNM" secondAttribute="trailing" constant="20" id="ciA-oW-Zho"/>
+                            <constraint firstItem="VWJ-RU-TNM" firstAttribute="top" secondItem="RQS-1B-svn" secondAttribute="bottom" constant="5" id="ieu-ta-Xgc"/>
+                            <constraint firstItem="RQS-1B-svn" firstAttribute="centerX" secondItem="XNp-f2-AiS" secondAttribute="centerX" id="zkd-D3-OKc"/>
                         </constraints>
                     </view>
                     <connections>

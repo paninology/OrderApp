@@ -43,14 +43,19 @@ class OrderConfirmationViewController: UIViewController {
     @objc func onTimerFires(timeLeft: Int)
     {
         self.timeLeft = timeLeft
+        let alertController = UIAlertController(title: "Wait time", message: "10 minutes left", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
         
-        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { (Timer) in
+        Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) { (Timer) in
                 if self.timeLeft > 0 {
-                    let totalProgress = Float(self.timeLeft) / Float(self.minutesToPrepare)
                     self.timeLeft -= 1
+                    let totalProgress = Float(self.timeLeft) / Float((self.minutesToPrepare))
                     print ("\(self.timeLeft) seconds",self.minutesToPrepare, totalProgress)
                     self.confirmationLAbel.text = "Your wait time is approximately \(self.timeLeft) minutes."
                     self.progressView.setProgress((1 - totalProgress), animated: true)
+                    if self.timeLeft == 10 {
+                        self.present(alertController, animated: true, completion: nil)
+                    }
                 } else {
                     Timer.invalidate()
                 }
